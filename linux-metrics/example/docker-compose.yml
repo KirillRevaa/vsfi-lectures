@@ -1,0 +1,32 @@
+version: "3.6"
+
+services:
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus:/prometheus
+    networks:
+      - monitoring
+    restart: always
+    command:
+      - '--web.enable-lifecycle'
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    container_name: prometheus
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./grafana.ini:/etc/grafana/grafana.ini
+      - ./grafana:/var/lib/grafana
+    networks:
+      - monitoring
+    restart: always
+    user: '472'
+    container_name: grafana
+networks:
+  monitoring:

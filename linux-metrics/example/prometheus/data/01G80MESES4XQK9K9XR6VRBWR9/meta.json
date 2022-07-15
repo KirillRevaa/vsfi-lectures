@@ -1,0 +1,17 @@
+{
+	"ulid": "01G80MESES4XQK9K9XR6VRBWR9",
+	"minTime": 1657814402194,
+	"maxTime": 1657821600000,
+	"stats": {
+		"numSamples": 2230,
+		"numSeries": 5,
+		"numChunks": 20
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01G80MESES4XQK9K9XR6VRBWR9"
+		]
+	},
+	"version": 1
+}

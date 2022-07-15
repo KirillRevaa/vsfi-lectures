@@ -1,0 +1,17 @@
+{
+	"ulid": "01G80MES483X7T8FR7514DT65A",
+	"minTime": 1657807200000,
+	"maxTime": 1657814400000,
+	"stats": {
+		"numSamples": 7185,
+		"numSeries": 5,
+		"numChunks": 60
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01G80MES483X7T8FR7514DT65A"
+		]
+	},
+	"version": 1
+}
